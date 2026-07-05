@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OVBC Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9e918f760b.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <nav id="nav">
@@ -17,9 +19,24 @@
                 <div class="nav__links">
                     <a href="#nav" class="nav__link">Home</a>
                     <a href="#about" class="nav__link">About Us</a>
-                    <a href="#ministries" class="nav__link">Ministries</a>
                     <a href="#prayer" class="nav__link">Prayer Requests</a>
+                    <a href="#ministries" class="nav__link">Ministries</a>
                     <a href="#contact" class="nav__link">Contact Us</a>
+                </div>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fa fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list"> <a href="#nav" class="menu__link" onclick="closeMenu()">Home</a></li>
+                        <li class="menu__list"> <a href="#about" class="menu__link" onclick="closeMenu()">About Us</a></li>
+                        <li class="menu__list"> <a href="#prayer" class="menu__link" onclick="closeMenu()">Prayer Requests</a></li>
+                        <li class="menu__list"> <a href="#ministries" class="menu__link" onclick="closeMenu()">Ministries</a></li>
+                        <li class="menu__list"> <a href="#contact" class="menu__link" onclick="closeMenu()">Contact Us</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -28,21 +45,23 @@
         <div class="container">
             <div class="row">
                 <div class="title__wrapper">
-                    <h1 class="title">OVBC</h1>
+                    <h1 class="title">Oak Valley <br> Baptist Church</h1>
+                    <h2>A Church focused on Love.</h2>
                 </div>
-                <div class="card--wrapper">
+                <div class="landing__card--wrapper">
                     <div class="cards">
-                        <div class="card">
-                            <h3>Service Times</h3>
-                            <p>Sunday School: </p>
-                            <p>Sunday Sermon:</p>
-                            <p>Wednesday Bible Study:</p>
+                        <div class="landing__card">
+                            <h2>"Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind." <br>Matthew 22:37
+                            </h2>
                         </div>
-                        <div class="card">
-                            <h3>Upcoming Events</h3>
-                            <p>Church Picnic: 06/28/2026</p>
-                            <p>Tuesday Cards: </p>
-                            <p>Sunday Lunch: </p>
+                        <div class="landing__img--wrapper">
+                            <img class="landing__img" src="undraw_with-love_rs1k.svg" alt="Landing Image">
+                        </div>
+                        <div class="landing__img--wrapper">
+                            <img class="landing__img" src="undraw_showing-support_ixfc.svg" alt="Landing Image">
+                        </div>
+                        <div class="landing__card">
+                            <h2>"Thou shalt love thy neighbour as thyself." <br>Matthew 22:39</h2>
                         </div>
                     </div>
                 </div>
@@ -55,14 +74,26 @@
                 <div class="title__wrapper">
                     <h1 class="title">About Us</h1>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="ministries">
-        <div class="container">
-            <div class="row">
-                <div class="title__wrapper">
-                    <h1 class="title">Ministries</h1>
+                <div class="card--wrapper">
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Service Times</h3>
+                            <p>Sunday School: </p>
+                            <p>Sunday Sermon:</p>
+                            <p>Wednesday Bible Study:</p>
+                        </div>
+                        <div class="card">
+                            <h3>Upcoming Events</h3>
+                            <p>Tuesday Cards: </p>
+                            <p>Men's Breakfast: </p>
+                            <p>Sunday Lunch: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__description">
+                    <p>OVBC is a community of believers dedicated to spreading the love<br> of Christ. We welcome everyone to join us in worship, fellowship, and service. Our mission is to grow in faith, serve our neighbors, and share the message of hope and salvation through Jesus Christ.</p>
+                    <p>We believe in the power of prayer, the importance of community, and the transformative love of God. Whether you are new to the faith or have been walking with Christ for years, we invite you to be a part of our church family.</p>
+                    <p>Join us for our weekly services, participate in our ministries, and experience the joy of living a life rooted in love and faith. Together, we can make a difference in our community and beyond.</p>
                 </div>
             </div>
         </div>
@@ -73,6 +104,42 @@
                 <div class="title__wrapper">
                     <h1 class="title">Prayer Requests</h1>
                 </div>
+                <div class="prayer__submition--wrapper">
+                    <form action="https://formspree.io/f/mnqvydqk" method="POST">
+                        <div class="prayer__contact">
+                            <div class="prayer__contact--info">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="prayer__contact--info">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="reply__to" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="prayer__request">
+                            <label for="request">Prayer Request:</label>
+                            <textarea id="request" name="request" rows="4" required></textarea>
+                            <button class="prayer__btn btn" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="ministries">
+        <div class="container">
+            <div class="row">
+                <div class="title__wrapper">
+                    <h1 class="title">Ministries</h1>
+                    <h2 class="ministry__title" onclick="ministryDescription()">Children's Sunday School</h2>
+                    <h2 class="ministry__title" onclick="ministryDescription()">Adult Group</h2>
+                    <h2 class="ministry__title" onclick="ministryDescription()">Women's Group</h2>
+                    <h2 class="ministry__title" onclick="ministryDescription()">Men's Group</h2>
+                    <h2 class="ministry__title" onclick="ministryDescription()">Card Ministry</h2>
+                    <h2 class="ministry__title" onclick="ministryDescription()">Men's Breakfast</h2>
+                    <h2 class="ministry__title" onclick="ministryDescription()">Moms' Night</h2>
+                </div>
             </div>
         </div>
     </section>
@@ -81,6 +148,28 @@
             <div class="row">
                 <div class="title__wrapper">
                     <h1 class="title">Contact Us</h1>
+                    <div class="prayer__submition--wrapper">
+                        <form action="https://formspree.io/f/mnqvydqk" method="POST">
+                            <div class="prayer__contact">
+                                <div class="prayer__contact--info">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="prayer__contact--info">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="reply__to" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="prayer__request">
+                                <label for="request">Message:</label>
+                                <textarea id="request" name="request" rows="4" required></textarea>
+                                <button class="btn" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 </div>
             </div>
         </div>
