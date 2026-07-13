@@ -6,7 +6,7 @@
     <title>OVBC Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/9e918f760b.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <nav id="nav">
@@ -23,9 +23,11 @@
                     <a href="#ministries" class="nav__link">Ministries</a>
                     <a href="#contact" class="nav__link">Contact Us</a>
                 </div>
-                <button class="btn__menu" onclick="openMenu()">
-                    <i class="fa fa-bars"></i>
-                </button>
+                <div>
+                    <button class="btn__menu" onclick="openMenu()">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
                 <div class="menu__backdrop">
                     <button class="btn__menu btn__menu--close" onclick="closeMenu()">
                         <i class="fa fa-times"></i>
@@ -78,20 +80,21 @@
                     <div class="cards">
                         <div class="card">
                             <h3>Service Times</h3>
-                            <p>Sunday School: </p>
-                            <p>Sunday Sermon:</p>
-                            <p>Wednesday Bible Study:</p>
+                            <p>Sunday School: 10:00am</p>
+                            <p>Children's Church: 11:00am</p>
+                            <p>Sunday Sermon: 11:00am</p>
+                            <p>Wednesday Bible Study: 6:00pm</p>
                         </div>
                         <div class="card">
                             <h3>Upcoming Events</h3>
-                            <p>Tuesday Cards: </p>
-                            <p>Men's Breakfast: </p>
-                            <p>Sunday Lunch: </p>
+                            <p>Tuesday Cards: 10:00am</p>
+                            <p>Wednesday Men's Breakfast: 8am</p>
+                            <p>Sunday Lunch: On the third Sunday of every month.</p>
                         </div>
                     </div>
                 </div>
                 <div class="about__description">
-                    <p>OVBC is a community of believers dedicated to spreading the love<br> of Christ. We welcome everyone to join us in worship, fellowship, and service. Our mission is to grow in faith, serve our neighbors, and share the message of hope and salvation through Jesus Christ.</p>
+                    <p>OVBC is a community of believers dedicated to spreading the love of Christ. We welcome everyone to join us in worship, fellowship, and service. Our mission is to grow in faith, serve our neighbors, and share the message of hope and salvation through Jesus Christ.</p>
                     <p>We believe in the power of prayer, the importance of community, and the transformative love of God. Whether you are new to the faith or have been walking with Christ for years, we invite you to be a part of our church family.</p>
                     <p>Join us for our weekly services, participate in our ministries, and experience the joy of living a life rooted in love and faith. Together, we can make a difference in our community and beyond.</p>
                 </div>
