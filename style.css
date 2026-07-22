@@ -460,4 +460,13 @@ footer{
     .prayer__contact{
         flex-direction: column;
     }
+
+    .popup-btn{
+        color: black;
+        text-decoration: underline;
+    }
+
+    .popup-btn:hover{
+        transform: none;
+    }
 }
