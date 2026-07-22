@@ -464,9 +464,12 @@ footer{
     .popup-btn{
         color: black;
         text-decoration: underline;
+        font-size: 24px;
     }
 
     .popup-btn:hover{
         transform: none;
     }
+
+
 }
