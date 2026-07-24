@@ -435,7 +435,7 @@ footer{
     }
 
     h3{
-        font-size: 32px;
+        font-size: 24px;
     }
 
     p{
@@ -453,6 +453,11 @@ footer{
         position: absolute;
     }
 
+    .landing__card--wrapper{
+        margin: 0;
+        padding: 8px;
+    }
+
     .footer__link{
         font-size: 12px;
     }
@@ -464,12 +469,19 @@ footer{
     .popup-btn{
         color: black;
         text-decoration: underline;
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .popup-btn:hover{
         transform: none;
     }
 
+    .title{
+        font-size: 32px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
 
 }
